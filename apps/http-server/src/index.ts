@@ -1,17 +1,17 @@
 import express, { Request, Response } from "express";
-import { client } from "@repo/db/client";
+import { client } from "@repo/db/client"
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req, res) => {
   res.json({
     msg: "hi nishu",
   });
 });
 
-app.post("/signup", async (req: Request, res: Response) => {
+app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
   try {
@@ -32,6 +32,6 @@ app.post("/signup", async (req: Request, res: Response) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+app.listen(3002, () => {
+  console.log("Server running on http://localhost:3002");
 });
