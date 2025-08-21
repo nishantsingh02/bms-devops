@@ -1,16 +1,18 @@
-import express, { Request, Response } from "express";
-import { client } from "@repo/db/client"
+const express = require("express");
+const { client } = require("@repo/db/client");
 
 const app = express();
 
 app.use(express.json());
 
+//@ts-ignore
 app.get("/", (req, res) => {
   res.json({
     msg: "hi nishu",
   });
 });
 
+//@ts-ignore
 app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
