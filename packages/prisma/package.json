@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "export": {
+  "exports": {
     "./client": "./src/index.ts"
   },
   "keywords": [],
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3"
   },
   "author": "",
   "license": "ISC",
